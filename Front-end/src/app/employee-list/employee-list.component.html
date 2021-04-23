@@ -1,0 +1,27 @@
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Job Title Name</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of employeeList">
+          <td>{{row.jobTitleName}}</td>
+          <td>{{row.firstName}}</td>
+          <td>{{row.lastName}}</td>
+          <td>{{row.email}}</td>
+          <td>
+            <!-- <a routerLink="/{{row_.id}}" class="btn btn-secondary btn-sm text-white">Update</a> -->
+            <button  (click)="updateRecords(row)" >Update</button>
+            <button (click)="deleteRecords(row)">Delete</button>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+  
+  </div>

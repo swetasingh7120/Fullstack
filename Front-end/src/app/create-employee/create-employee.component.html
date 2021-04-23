@@ -1,0 +1,27 @@
+<div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup]="registerForm" (ngSubmit)="postData()">
+                    <div class="form-group">
+                        <label>jobTitleName</label>
+                        <input type="text" class="form-control" formControlName="jobTitleName" placeholder="jobTitleName">
+                    </div>
+                    <div class="form-group">
+                        <label>firstName</label>
+                        <input type="text" class="form-control" formControlName="firstName" placeholder="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label>lastName</label>
+                        <input type="text" class="form-control" formControlName="lastName" placeholder="lastName">
+                    </div>
+                    <div class="form-group">
+                        <label>email</label>
+                        <input type="email" class="form-control" formControlName="email" placeholder="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

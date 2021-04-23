@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark bg-light navbar-expand-sm">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-2" *ngIf="!isLogin()">
+                    <a routerLink="/home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a routerLink="/employee-list" (click)="checkToken()" class="nav-link">Employee-List</a>
+                </li>
+                <li class="nav-item px-2" *ngIf="!isLogin()">
+                    <a routerLink="/create-employee" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item px-2" *ngIf="!isLogin()">
+                    <a routerLink="/login" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item px-2" *ngIf="isLogin()"(click)="clickLogout()" >
+                    <a routerLink="" class="nav-link">Logout</a>
+                  </li>
+                <!-- <li class="nav-item px-2">
+            <a routerLink="/show" class="nav-link">show Detail</a>
+            </li> -->
+            </ul>
+        </div>
+    </div>
+
+</nav>
